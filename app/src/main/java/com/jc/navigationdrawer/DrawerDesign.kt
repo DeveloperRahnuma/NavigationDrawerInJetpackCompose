@@ -1,5 +1,6 @@
 package com.jc.navigationdrawer.ui
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -9,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -17,9 +19,15 @@ import com.jc.navigationdrawer.MenuItem
 @Composable
 fun DrawerHeader(){
     Box(
-        modifier = Modifier.fillMaxWidth().padding(64.dp),
+        modifier = Modifier.fillMaxWidth().fillMaxHeight(0.3f).background(Color.Blue),
         ){
-        Text(text = "Header", fontSize = 60.sp)
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally) {
+            Text(text = "Header", fontSize = 60.sp)
+        }
+
     }
 }
 
@@ -34,7 +42,7 @@ fun DrawerBody(
 
     LazyColumn(modifier){
         items(items){ item ->
-            Row(modifier = Modifier.fillMaxWidth().clickable {
+            Row(modifier = Modifier.fillMaxWidth().padding(10.dp).clickable {
                 onItemClick(item)
             },){
                 Icon(imageVector = item.icon,contentDescription = item.contentDis )

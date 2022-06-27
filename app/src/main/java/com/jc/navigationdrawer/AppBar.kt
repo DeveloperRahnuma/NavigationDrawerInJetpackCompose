@@ -10,15 +10,5 @@ import androidx.compose.ui.res.stringResource
 fun AppBar(
     onNavigationIconClick : () -> Unit
 ){
-    TopAppBar(
-        title = { Text(text = stringResource(R.string.app_name))},
-        backgroundColor = MaterialTheme.colors.primary,
-        contentColor = MaterialTheme.colors.onPrimary,
-        navigationIcon = { IconButton(onClick = {onNavigationIconClick}){
-            Icon(
-                imageVector = Icons.Default.Menu,
-                contentDescription = "Toggle drawer"
-            )
-        } }
-    )
+
 }
