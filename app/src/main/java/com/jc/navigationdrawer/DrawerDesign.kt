@@ -25,7 +25,7 @@ fun DrawerHeader(){
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(text = "Header", fontSize = 60.sp)
+            Text(text = "Rahnuma Sharib", fontSize = 40.sp)
         }
 
     }

@@ -7,8 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
@@ -51,10 +50,10 @@ class MainActivity : ComponentActivity() {
                             DrawerHeader()
                             DrawerBody(
                                 items = listOf(
-                                    MenuItem(id = "Home", title = "Home", contentDis = "", icon = Icons.Default.Home),
-                                    MenuItem(id = "Home", title = "Home", contentDis = "", icon = Icons.Default.Home),
-                                    MenuItem(id = "Home", title = "Home", contentDis = "", icon = Icons.Default.Home),
-                                    MenuItem(id = "Home", title = "Home", contentDis = "", icon = Icons.Default.Home)
+                                    MenuItem(id = "1", title = "Home", contentDis = "", icon = Icons.Default.Home),
+                                    MenuItem(id = "2", title = "Settings", contentDis = "", icon = Icons.Default.Settings),
+                                    MenuItem(id = "3", title = "Search", contentDis = "", icon = Icons.Default.Search),
+                                    MenuItem(id = "4", title = "Send", contentDis = "", icon = Icons.Default.Send)
                                 ),
                                 onItemClick = {
                                     println("clicked on ${it.title}")
